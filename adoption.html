@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Yashar Javdani" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mao</title>
+    <!-- add the Roboto font with different font weights -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <!-- add icons from https://iconscout.com/unicons/ -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  </head>
+  <body>
+    <!-- the header is found on all pages -->
+    <!-- it is fixed and contains the navbar and also the theme switch button -->
+    <!-- for smaller screens the header displays a bars icon which on click displays the menu -->
+    <header id="header">
+      <!-- the navbar contains the nav menu -->
+      <!-- on smaller screens the navbar displays the bars icon which on click shows the menu -->
+      <nav id="navbar">
+        <!-- logo -->
+        <!-- the logo is hidden on small screen -->
+        <!-- click on the logo in order to reach the website report -->
+        <a href="report.html" title="Click here to see the website report">
+          <!-- Illustration from https://undraw.co/ -->
+          <img
+            src="assets/illustrations/logo.svg"
+            alt="Logo image"
+            class="logo-image" />
+        </a>
+        <!-- navigation menu -->
+        <!-- contains the links to the 5 pages and the menu toggle icon for small screen -->
+        <div class="nav-menu">
+          <!-- toggle button -->
+          <i class="uil uil-bars" id="nav-toggle-button"></i>
+          <!-- navigation list -->
+          <!-- contains a list where each element is a link to a page -->
+          <ul class="nav-list" id="nav-list">
+            <!-- navigation list items -->
+            <li class="nav-item">
+              <!-- references to the 5 pages links -->
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="adoption.html" class="nav-link">Adopt a Cat</a>
+            </li>
+            <li class="nav-item">
+              <a href="donation.html" class="nav-link">Donations</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About us</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- theme button -->
+      <div class="theme-button">
+        <!-- theme button icon -->
+        <!-- on click, the theme button is switched between sun/moon -->
+        <i class="uil uil-moon" id="theme-switch-button"></i>
+      </div>
+    </header>
+    <!-- the main section of the page -->
+    <!-- 
+      the main section contains:
+      - title
+      - subtitle
+      - banner picture
+      - useful information about the adoption process
+      - the scroll up button (has fixed position; on click sends the user to the top of the page)
+    -->
+    <main>
+      <!-- scroll up button -->
+      <button class="scroll-up-button" id="scroll-up-button">
+        <i class="uil uil-arrow-up scroll-up-icon"></i>
+      </button>
+      <!-- the first section of the adoption page -->
+      <section class="container">
+        <h1 class="title">Adopt a Cat!</h1>
+        <h2 class="subtitle">
+          We make the adoption process as simple as possible for you.
+        </h2>
+        <!-- Photo by Dietmar Ludmann on Unsplash -->
+        <!-- https://unsplash.com/photos/orange-tabby-cat-on-white-wooden-cabinet-qs4j-39TaBQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash -->
+        <img
+          src="assets/images/cats-banner.webp"
+          alt="Banner image: four cats sitting on a kitchen table looking around."
+          class="banner-image" />
+      </section>
+      <!-- the second section of the adoption page -->
+      <!-- this doesn't have the class container since it needs more space on the page -->
+      <!-- the container has a width of 80% for big screens and 90% for smaller screens -->
+      <section>
+        <h1 class="title">Information about adoption</h1>
+        <br />
+        <h2 class="subtitle">How does the adoption process look like?</h2>
+        <br />
+        <!-- a list of informations about adoption -->
+        <ul class="adoption-steps">
+          <!-- first step -->
+          <!-- each step has a info and side info -->
+          <li class="adoption-step">
+            <!-- by clicking on the element the user opens a modal with more info -->
+            <span class="adoption-info" onclick="openModal('centre-info')">
+              <b>1. Visit our centre</b>
+            </span>
+            <!-- the side info contains the arrow icon and text -->
+            <div class="adoption-side-info">
+              <i class="uil uil-arrow-right"></i>
+              <span class="adoption-info-description">
+                Visit our adoption centre and choose a cat.
+              </span>
+            </div>
+            <!-- the actual modal that opens on click -->
+            <!-- when opened, the user can click anywhere on the page to close it -->
+            <p class="modal" id="centre-info" onclick="closeModal(event)">
+              Visit our adoption centre and choose a cat. You can also visit one
+              of our associated centres throughout Europe. The countries we
+              activate in are Bulgaria, Romania, Ukraine, Hungary, Austria,
+              Germany, France, UK, Poland, or Czech Republic
+            </p>
+          </li>
+          <!-- second step -->
+          <li class="adoption-step">
+            <span class="adoption-info" onclick="openModal('form-info')">
+              <b>2. Complete the adoption form</b>
+            </span>
+            <div class="adoption-side-info">
+              <i class="uil uil-arrow-right"></i>
+              <span class="adoption-info-description">
+                Complete the adoption form online or in person.
+              </span>
+            </div>
+            <p class="modal" id="form-info" onclick="closeModal(event)">
+              Complete the adoption form. This will include questions like
+              details about your home regarding cat safety. Please don't forget
+              to bring your ID card!
+            </p>
+          </li>
+          <!-- third step -->
+          <li class="adoption-step">
+            <span class="adoption-info" onclick="openModal('approval-info')">
+              <b>3. Form approval</b>
+            </span>
+            <div class="adoption-side-info">
+              <i class="uil uil-arrow-right"></i>
+              <span class="adoption-info-description">
+                Please give honest information only.
+              </span>
+            </div>
+            <p class="modal" id="approval-info" onclick="closeModal(event)">
+              We care a lot about cats' wellbeing so we will take a close look
+              at the form and then approve it if everything is in order.
+            </p>
+          </li>
+          <!-- fourth step -->
+          <li class="adoption-step">
+            <span class="adoption-info" onclick="openModal('cat-info')">
+              <b>4. Get to know the cat better</b>
+            </span>
+            <div class="adoption-side-info">
+              <i class="uil uil-arrow-right"></i>
+              <span class="adoption-info-description">
+                Spend 30 minutes with the chosen cat and see how you get along.
+              </span>
+            </div>
+            <p class="modal" id="cat-info" onclick="closeModal(event)">
+              At your request, we can arrange a small visit at our centre in
+              order for you and your family to know the cat better befor
+              adoption. In order to schedule a meeting please check our
+              <a href="contact.html"><b>opening hours</b></a
+              >.
+            </p>
+          </li>
+          <!-- fifth step -->
+          <li class="adoption-step">
+            <span class="adoption-info" onclick="openModal('get-cat-info')">
+              <b>5. Get the cat home</b>
+            </span>
+            <div class="adoption-side-info">
+              <i class="uil uil-arrow-right"></i>
+              <span class="adoption-info-description">
+                All goes well? You now have a cat. Congrats!
+              </span>
+            </div>
+            <p class="modal" id="get-cat-info" onclick="closeModal(event)">
+              If the whole process goes well and your form is approved, you can
+              take the cat home the same day.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <!-- the footer -->
+    <!-- contains links, and copyright message -->
+    <!-- the year is automatically set as the current year through JS -->
+    <footer>
+      <p class="copyright">
+        Copyright &COPY; <a href="index.html">Mao</a> <span id="date"></span>.
+        All rights reserved
+      </p>
+      <ul class="footer-links">
+        <li>
+          <a href="#"> Legal Stuff </a>
+        </li>
+        <li>
+          <a href="#"> Provacy Policy </a>
+        </li>
+        <li>
+          <a href="#"> Security </a>
+        </li>
+        <li>
+          <a href="#"> Website Accessibility </a>
+        </li>
+        <li>
+          <a href="#"> Manage Cookies </a>
+        </li>
+      </ul>
+    </footer>
+    <!-- JS files -->
+    <script src="/js/main.js"></script>
+    <script src="/js/modal.js"></script>
+  </body>
+</html>

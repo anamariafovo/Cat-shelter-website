@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Yashar Javdani" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mao</title>
+    <!-- add the Roboto font with different font weights from google fonts -->
+    <!-- I chose the Roboto font because I find it neutral but also pleasant to the eye -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <!-- add icons from https://iconscout.com/unicons/ -->
+    <!-- the free unicons that I've used are helpful in providing a better user experience -->
+    <!-- for example: using sun/moon icon for the theme switch button -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  </head>
+  <body>
+    <!-- the header is found on all pages -->
+    <!-- it is fixed and contains the navbar and also the theme switch button -->
+    <!-- for smaller screens the header displays a bars icon which shows the menu on click -->
+    <header id="header">
+      <!-- the navbar contains the navigation menu -->
+      <!-- on smaller screens the navbar displays the bars icon which on click shows the menu -->
+      <nav id="navbar">
+        <!-- logo -->
+        <!-- the logo is hidden on small screen -->
+        <!-- click on the logo in order to reach the website report -->
+        <a href="report.html" title="Click here to see the website report">
+          <!-- Illustration from https://undraw.co/ -->
+          <img
+            src="assets/illustrations/logo.svg"
+            alt="Logo image"
+            class="logo-image" />
+        </a>
+        <!-- navigation menu -->
+        <!-- contains the links to the 5 pages and the menu toggle icon for small screen -->
+        <div class="nav-menu">
+          <!-- toggle button -->
+          <i class="uil uil-bars" id="nav-toggle-button"></i>
+          <!-- navigation list -->
+          <!-- contains a list where each element is a link to a page -->
+          <ul class="nav-list" id="nav-list">
+            <!-- navigation list items -->
+            <li class="nav-item">
+              <!-- references to the 5 pages links -->
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="adoption.html" class="nav-link">Adopt a Cat</a>
+            </li>
+            <li class="nav-item">
+              <a href="donation.html" class="nav-link">Donations</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About us</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- theme button -->
+      <div class="theme-button">
+        <!-- theme button icon -->
+        <!-- on click, the theme button is switched between sun/moon -->
+        <!-- it changes also the background for the body and header -->
+        <i class="uil uil-moon" id="theme-switch-button"></i>
+      </div>
+    </header>
+    <!-- the main section -->
+    <!-- 
+      for the home page, the main section includes: 
+      - title
+      - subtitle
+      - banner picture
+      - welcome paragraph with a video
+      - the help us section with the helping options 
+      - useful information and articles section
+      - the scroll up button (has fixed position; on click sends the user to the top of the page)
+    -->
+    <main>
+      <!-- scroll up button -->
+      <!-- this fixed element is at the right bottom side of the page -->
+      <!-- on click it sends the user to the top of the page -->
+      <button class="scroll-up-button" id="scroll-up-button">
+        <i class="uil uil-arrow-up scroll-up-icon"></i>
+      </button>
+      <!-- the first section of the home page -->
+      <!-- contains title, subtitle and banner image -->
+      <section class="container">
+        <h1 class="title">Welcome to Mao!</h1>
+        <h2 class="subtitle">
+          Our charity organisation helps stray cats around Europe to find a
+          loving home and a caring family.
+        </h2>
+        <!-- Photo by Daria Shatova on Unsplash -->
+        <!-- https://unsplash.com/@dariasha911?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash -->
+        <img
+          src="assets/images/home-banner.webp"
+          alt="Banner image: a cat looking at the user."
+          class="banner-image" />
+      </section>
+      <!-- the second section of the home page -->
+      <!-- this section contains a welcome text and a presentation video -->
+      <section class="container">
+        <div class="welcome-section">
+          <div class="welcome-text">
+            <p>
+              Hi! We are <b>Mao</b>, a charity organisation that helps cats
+              around Europe. Our shelter in Iasi provides rescued cats all the
+              attention and care they need to live a happy life. We started as a
+              small team, motivated by creating a safe environment for cats. At
+              the current moment we activate in multiple countries around
+              Europe, and with help from caring people we can continue growing
+              and doing our work.
+            </p>
+            <p>
+              Interested in our work? Please find more infomation in our
+              <a href="about.html">about us</a> page.
+            </p>
+          </div>
+          <!-- add controls (start, pause, etc.) for the video -->
+          <!-- make the video play repeatedly -->
+          <!-- on Google Chrome we need the muted attribute in order for the video to play automatically -->
+          <video class="presentation-video" controls autoplay loop muted>
+            <!-- Video by julian zapata on Pixabay -->
+            <!-- https://pixabay.com/de/users/julianza-51829/?utm_source=link-attribution&utm_medium=referral&utm_campaign=video&utm_content=3092 -->
+            <source src="assets/videos/cute_cat.mp4" type="video/mp4" />
+            Your browser does not support videos.
+          </video>
+        </div>
+      </section>
+      <!-- the third section of the home page -->
+      <!-- contains an overview over how the user can help -->
+      <!-- each box contains a link to another page -->
+      <section class="container">
+        <h1 class="title">How YOU can help us</h1>
+        <!-- the box container contains the four help boxes -->
+        <div class="box-container">
+          <!-- volunteering helping option -->
+          <!-- sends the user to the contact page -->
+          <a href="contact.html" class="box">
+            <!-- Illustration from https://undraw.co/ -->
+            <img
+              src="assets/illustrations/friends.svg"
+              alt="A woman sitting next to a cat outside."
+              class="box-image" />
+            <p>Volunteering</p>
+          </a>
+          <!-- donation helping option -->
+          <!-- sends the user to the donation page -->
+          <a href="donation.html" class="box">
+            <!-- Illustration from https://undraw.co/ -->
+            <img
+              src="assets/illustrations/donate.svg"
+              alt="A man with a credit card."
+              class="box-image" />
+            <p>Donating</p>
+          </a>
+          <!-- adoption helping option -->
+          <!-- sends the user to the adoption page -->
+          <a href="adoption.html" class="box">
+            <!-- Illustration from https://undraw.co/ -->
+            <img
+              src="assets/illustrations/adopt.svg"
+              alt="A man looking at a website page that shows information about a cat."
+              class="box-image" />
+            <p>Adopt a cat</p>
+          </a>
+          <!-- sharing helping option -->
+          <!-- sends the user to the about us page -->
+          <a href="about.html" class="box">
+            <!-- Illustration from https://undraw.co/ -->
+            <img
+              src="assets/illustrations/share.svg"
+              alt="A woman looking at a big phone."
+              class="box-image" />
+            <p>Sharing our work</p>
+          </a>
+        </div>
+      </section>
+      <!-- the fourth section of the home page -->
+      <!-- news and articles section -->
+      <!-- contains 6 articles or news -->
+      <section class="container">
+        <h1 class="title">Useful Information and Articles</h1>
+        <!-- the articles container -->
+        <div class="articles">
+          <!-- an article card -->
+          <!-- 
+            each article card contains:
+            - an image (all images are compressed for better performance)
+            - title
+            - short description
+            - more info button
+          -->
+          <article class="article-card">
+            <!-- Photo by Roberto Huczek on Unsplash -->
+            <!-- https://unsplash.com/photos/white-and-gray-cat-on-brown-wooden-table-oA6zqMdnhjE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash -->
+            <img
+              src="assets/images/cat-home.webp"
+              alt="cat sitting on house porch" />
+            <h3 class="article-title">How to prepare your home for a cat</h3>
+            <p class="article-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#" class="button"> More Info </a>
+          </article>
+          <article class="article-card">
+            <!-- Photo by Sahand Babali on Unsplash -->
+            <!-- https://unsplash.com/photos/red-strawberries-on-pink-surface-YrlNLfGFhT0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash -->
+            <img src="assets/images/foods.webp" alt="strawberries image" />
+            <h3 class="article-title">
+              Surprising foods that are healthy for your cats
+            </h3>
+            <p class="article-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#" class="button"> More Info </a>
+          </article>
+          <article class="article-card">
+            <!-- Photo by Kim Davies on Unsplash -->
+            <!-- https://unsplash.com/photos/gray-kitten-sitting-on-floor-fEK4jvgnApg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash -->
+            <img
+              src="assets/images/products.webp"
+              alt="a cat playing with cat toys" />
+            <h3 class="article-title">
+              Best items that will make your life easier
+            </h3>
+            <p class="article-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#" class="button"> More Info </a>
+          </article>
+          <article class="article-card">
+            <!-- Photo by Andriyko Podilnyk on Unsplash -->
+            <!-- https://unsplash.com/photos/orange-tabby-kitten-in-grasses-RCfi7vgJjUY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash -->
+            <img
+              src="assets/images/cat-behaviour.webp"
+              alt="a cat walking in a field" />
+            <h3 class="article-title">Cat behaviour</h3>
+            <p class="article-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#" class="button"> More Info </a>
+          </article>
+          <article class="article-card">
+            <!-- Photo by Link Hoangon on Unsplash -->
+            <!-- https://unsplash.com/photos/black-framed-ray-ban-wayfarer-sunglasses-on-top-of-book-UoqAR2pOxMo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash -->
+            <img
+              src="assets/images/holiday.webp"
+              alt="An image of sunglasses sitting on an exotic beach." />
+            <h3 class="article-title">
+              Leaving for holiday? What to do about your cat?
+            </h3>
+            <p class="article-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#" class="button"> More Info </a>
+          </article>
+          <article class="article-card">
+            <!-- Photo by Paul Hanaoka on Unsplash -->
+            <!-- https://unsplash.com/photos/orange-and-white-tabby-cat-sitting-on-brown-wooden-table-in-kitchen-room-w2DsS-ZAP4U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash -->
+            <img
+              src="assets/images/kitchen-cat.webp"
+              alt="A cat sitting on the kitchen table." />
+            <h3 class="article-title">Signs your cat needs more attention</h3>
+            <p class="article-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="#" class="button"> More Info </a>
+          </article>
+        </div>
+      </section>
+    </main>
+    <!-- the footer -->
+    <!-- contains links, and copyright message -->
+    <!-- the year is automatically set as the current year through JS -->
+    <footer>
+      <!-- the year is changed to the current year in JS -->
+      <p class="copyright">
+        Copyright &COPY; <a href="index.html">Mao</a> <span id="date"></span>.
+        All rights reserved
+      </p>
+      <ul class="footer-links">
+        <li>
+          <a href="#"> Legal Stuff </a>
+        </li>
+        <li>
+          <a href="#"> Provacy Policy </a>
+        </li>
+        <li>
+          <a href="#"> Security </a>
+        </li>
+        <li>
+          <a href="#"> Website Accessibility </a>
+        </li>
+        <li>
+          <a href="#"> Manage Cookies </a>
+        </li>
+      </ul>
+    </footer>
+    <!-- JS files -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>

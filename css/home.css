@@ -1,0 +1,182 @@
+/* 
+  this styles the welcome text and video
+*/
+.welcome-section {
+  /* display the welcome text and video as row */
+  display: flex;
+  align-items: center;
+  /* separate the two elements */
+  column-gap: 60px;
+  margin: 0 40px;
+}
+.welcome-text {
+  /* welcome text occupies 40% of the space in the welcome-section element */
+  width: 50%;
+  padding-bottom: 10px;
+}
+.welcome-text p {
+  font-size: 18px;
+  /* make the welcome text more readable by adjusting the line height */
+  line-height: 2;
+  /* alight the text at the start and end */
+  text-align: justify;
+}
+.presentation-video {
+  width: 440px;
+  height: 500px;
+  /* the video occupies 60% of the space in the welcome-section element */
+  width: 50%;
+}
+/* 
+  contains the element in the help us section
+*/
+.box-container {
+  /* display the boxes inside the box container as grid */
+  display: grid;
+  /* for large screens display all 4 boxes */
+  grid-template-columns: repeat(4, 1fr);
+  /* separate each element */
+  grid-gap: 60px;
+  margin: 20px 0;
+}
+/* 
+  contains the svg and help option text
+*/
+.box {
+  display: flex;
+  /* arrange the svg and text as column */
+  flex-direction: column;
+  /* the box shadow separates the boxes */
+  box-shadow: 1px 2px 7px 1px rgb(0 0 0 / 20%);
+  padding: 20px;
+  /* transition for hover */
+  transition: 0.3s;
+  /* the linear gradient here is the one used for the dark theme aslo */
+  /* in this way it looks visually pleasant on both light and dark themes */
+  background: linear-gradient(to left, #1f76b4, #9999ff);
+}
+.box p {
+  color: #fff;
+}
+.box:hover {
+  filter: brightness(1.25);
+}
+/* 
+  the svg inside a help us box
+*/
+.box-image {
+  /* each box has an svg that should fill the space inside the box */
+  width: 200px;
+  height: 200px;
+  object-fit: fill;
+}
+/* 
+  contains the article cards
+*/
+.articles {
+  /* the news and articles are displayed as grid */
+  display: grid;
+  /* display 3 articles per row for large screens */
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 60px;
+  margin: 20px 0;
+}
+/* 
+  styling the image, title, text and button in an article card
+*/
+.article-card {
+  /* display all the elements as column */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align the elements and text at the start of the card */
+  align-items: flex-start;
+  text-align: start;
+  /* box shadow separates each card visually */
+  box-shadow: 1px 2px 7px 1px rgb(0 0 0 / 20%);
+  /* padding makes the text fit better into the card */
+  padding: 10px 20px;
+  border-radius: 1.2rem;
+  /* give the card a lighter color to separate it from the background color */
+  background-color: #ffffff12;
+  transition: 0.3s;
+}
+.article-card:hover {
+  /* make the card bigger on hover */
+  transform: scale(1.03);
+}
+.article-card img {
+  /* the image has the same border radius as the article card for a better visual effect*/
+  border-radius: 1.2rem;
+}
+.article-title,
+.article-description {
+  padding: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1400px) {
+  .box-container {
+    /* display two help us boxes per row for small to medium screens */
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .articles {
+    /* display two articles per row for smaller to medium screens */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .articles {
+    /* put only one article per row for smaller screens */
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .welcome-text p {
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 767px) {
+  .welcome-section {
+    /* display the welcome text and video as column to fit better on a small screen */
+    display: flex;
+    flex-direction: column;
+  }
+  .welcome-text {
+    /* welcome text occupies 100% of the width */
+    width: 100%;
+  }
+  .welcome-text p {
+    font-size: 14px;
+    line-height: 1.5;
+    width: 100%;
+  }
+  .presentation-video {
+    display: none;
+  }
+  .box-container {
+    /* display only 1 help box on smaller screens */
+    grid-template-columns: repeat(1, 1fr);
+    padding: 5px 30px;
+    grid-gap: 20px;
+    margin: 0;
+  }
+  .box:nth-child(2n) {
+    /* align the element in every second box to the end of the box */
+    align-items: end;
+  }
+  .box p {
+    font-size: 16px;
+  }
+  .articles {
+    /* put only one article per row for smaller screens */
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    margin: 0;
+  }
+  .article-title {
+    font-size: 16px;
+  }
+  .article-description {
+    font-size: 14px;
+  }
+}

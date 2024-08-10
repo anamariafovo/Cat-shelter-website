@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Yashar Javdani" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mao</title>
+    <!-- add the Roboto font with different font weights -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <!-- add icons from https://iconscout.com/unicons/ -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav id="navbar">
+        <!-- logo -->
+        <!-- the logo is hidden on small screen -->
+        <!-- click on the logo in order to reach the website report -->
+        <a href="report.html" title="Click here to see the website report">
+          <!-- Illustration from https://undraw.co/ -->
+          <img
+            src="assets/illustrations/logo.svg"
+            alt="Logo image"
+            class="logo-image" />
+        </a>
+        <!-- navigation menu -->
+        <div class="nav-menu">
+          <!-- toggle button -->
+          <i class="uil uil-bars" id="nav-toggle-button"></i>
+          <!-- navigation list -->
+          <ul class="nav-list" id="nav-list">
+            <!-- navigation list items -->
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="adoption.html" class="nav-link">Adopt a Cat</a>
+            </li>
+            <li class="nav-item">
+              <a href="donation.html" class="nav-link">Donations</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About us</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- theme button -->
+      <div class="theme-button">
+        <i class="uil uil-moon" id="theme-switch-button"></i>
+      </div>
+    </header>
+    <!-- the main section of the contact page -->
+    <!-- 
+      contains:
+      - title
+      - subtitle
+      - address
+      - contact form
+      - opening hours
+     -->
+    <main>
+      <button class="scroll-up-button" id="scroll-up-button">
+        <i class="uil uil-arrow-up scroll-up-icon"></i>
+      </button>
+      <!-- the first section in the contact page -->
+      <section class="container">
+        <h1 class="title">Contact us!</h1>
+        <h2 class="subtitle">Contact us directly about your request.</h2>
+        <h2 class="contact-option-title">Find us at the address below:</h2>
+        <!-- address -->
+        <div class="vertical-elements">
+          <!-- street -->
+          <span class="vertical-element">Magnolia Str. 123</span>
+          <!-- city and postal code -->
+          <span class="vertical-element">1040 Iasi</span>
+          <!-- phone number -->
+          <span class="vertical-element">Phone: +1234567890</span>
+        </div>
+        <h2 class="contact-option-title">Or contact us online:</h2>
+        <br />
+        <!-- contact form -->
+        <!-- 
+          the contact form contains:
+          - one input field for first name and one field for the last name
+          - email address field
+          - topic select element with multiple options
+          - text field for th message
+          - send button
+          - confirmation message that appears on send and disappears after 3 seconds
+        -->
+        <form id="contact-form" class="contact-form">
+          <!-- first name -->
+          <div class="form-element form-element-with-text">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" placeholder="First name" />
+          </div>
+          <!-- last name -->
+          <div class="form-element form-element-with-text">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" placeholder="Last name" />
+          </div>
+          <!-- email -->
+          <div class="form-element form-element-with-text">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Email" />
+          </div>
+          <!-- topic select -->
+          <div class="form-element form-element-with-text">
+            <label for="topic">Choose here the reason for contacting us:</label>
+            <select id="topic">
+              <option value="Adoption">Adoption</option>
+              <option value="Donations">Donations</option>
+              <option value="Report a cat in need of help">
+                Report a cat in need of help
+              </option>
+              <option value="Account management">Account management</option>
+            </select>
+          </div>
+          <!-- message textarea -->
+          <div class="form-element form-element-with-text">
+            <label for="message">Leave us a message:</label>
+            <textarea
+              id="message"
+              placeholder="Write your message here"></textarea>
+          </div>
+          <!-- submit button -->
+          <div class="form-element">
+            <button type="submit" class="submit-button">SEND</button>
+          </div>
+          <!-- confirmation message -->
+          <!-- appears only after submitting the form and then disappears -->
+          <p id="confirmation-message" class="confirmation"></p>
+        </form>
+        <h2 class="contact-option-title">Opening hours:</h2>
+        <!-- opening hours -->
+        <div class="vertical-elements">
+          <span class="vertical-element"><b>Monday: </b>8:00 - 20:00</span>
+          <span class="vertical-element"><b>Tuesday: </b>8:00 - 20:00</span>
+          <span class="vertical-element"><b>Wednesday: </b>10:00 - 22:00</span>
+          <span class="vertical-element"><b>Thursday: </b>8:00 - 20:00</span>
+          <span class="vertical-element"><b>Friday: </b>8:00 - 20:00</span>
+          <span class="vertical-element"><b>Saturday: </b>10:00 - 18:00</span>
+          <span class="vertical-element"><b>Sunday: </b>10:00 - 16:00</span>
+        </div>
+      </section>
+    </main>
+    <!-- the footer -->
+    <!-- contains links, and copyright message -->
+    <!-- the year is automatically set as the current year through JS -->
+    <footer>
+      <p class="copyright">
+        Copyright &COPY; <a href="index.html">Mao</a> <span id="date"></span>.
+        All rights reserved
+      </p>
+      <ul class="footer-links">
+        <li>
+          <a href="#"> Legal Stuff </a>
+        </li>
+        <li>
+          <a href="#"> Provacy Policy </a>
+        </li>
+        <li>
+          <a href="#"> Security </a>
+        </li>
+        <li>
+          <a href="#"> Website Accessibility </a>
+        </li>
+        <li>
+          <a href="#"> Manage Cookies </a>
+        </li>
+      </ul>
+    </footer>
+    <!-- JS files -->
+    <script src="/js/main.js"></script>
+    <script src="/js/contactFormSubmit.js"></script>
+  </body>
+</html>

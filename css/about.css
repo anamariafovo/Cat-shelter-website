@@ -1,0 +1,159 @@
+/* 
+  contains two about-info sections
+*/
+.about-container {
+  /* display the elements one above the other */
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+/* 
+  contains a title, paragraph and a media element
+*/
+.about-info {
+  /* the about info (paragraph and image/video) is displayed as row */
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.about-info-title {
+  padding-bottom: 5px;
+  text-decoration: underline;
+}
+/* 
+  the text in the about info which contains multiple paragraphs
+*/
+.about-info div {
+  /* the text of the about info occupies 50% of the space */
+  width: 50%;
+}
+.about-info p {
+  font-size: 18px;
+  /* alight the text at the start and end */
+  text-align: justify;
+  line-height: 1.5;
+}
+.about-info img,
+.about-info video {
+  /* the image or video of the about info occupies 50% of the space */
+  width: 50%;
+  border-radius: 2rem;
+}
+.about-info video {
+  box-shadow: 1px 2px 7px 1px rgb(0 0 0 / 20%);
+}
+/* 
+  is displayed at the bottom of the page before the footer
+  when the user clicks on the element, the whole FAQ list is shown
+  contains the title and the arrow down/up
+*/
+.faq-dropdown {
+  display: flex;
+  width: 100%;
+  /* match the color paletter of the website */
+  background: linear-gradient(to right, #1f76b4, #9999ff);
+  border: 2px solid #fff3fd;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+/*
+  the arrows are switched on click
+*/
+.uil-arrow-down,
+.uil-arrow-up {
+  font-size: 25px;
+}
+/* 
+  displays multiple frequently asked questions
+*/
+.faq-list {
+  /* initially the faq list is hidden and shown when the user clicks the faq dropdown element */
+  display: none;
+}
+/* 
+  this class is toggled (added or removed from the faq list) when the user clicks on the dropdown element
+*/
+.show-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 10px;
+}
+/* 
+  contains a question and an answer
+*/
+.faq-group {
+  width: 100%;
+  /* box shadow separates each question & answer group */
+  box-shadow: 1px 2px 7px 1px rgb(0 0 0 / 20%);
+}
+.faq-question {
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  /* the background is transparent so that it is visually spearated from the faq dropdown on the top */
+  /* but it also fits the colours chosen for the body */
+  background: transparent;
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* 
+  shown when the user click on the question
+*/
+.faq-answer {
+  /* the answer is initially not dispplayed */
+  display: none;
+  line-height: 1.5;
+}
+/* 
+  this class is added or removed from the faq answer if user clicks on the question
+*/
+.show-answer {
+  display: block;
+  padding: 10px;
+}
+
+@media (max-width: 820px) {
+  .about-info {
+    /* the display block fits better on smaller screens */
+    display: block;
+  }
+  .about-info div {
+    width: 100%;
+  }
+  .about-info p {
+    /* the text takes 100% space of the container for better visibility on small screens */
+    width: 100%;
+    /* make the font smaller on small screens so it fits better */
+    font-size: 16px;
+    /* make the line height bigger to be readable */
+    line-height: 1.5;
+  }
+  .about-info:nth-child(2n) img {
+    /* in order to fit better in the small screen, the second images are hidden from the about-info */
+    display: none;
+  }
+  .about-info img,
+  .about-info video {
+    border-radius: 0;
+    /* make the images or videos occupy a bigger space for smaller screens so they can be seen better */
+    width: 100%;
+    margin-top: 10px;
+  }
+  .faq-question,
+  .faq-answer {
+    font-size: 14px;
+  }
+}

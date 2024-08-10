@@ -1,0 +1,94 @@
+/* 
+  the container contains the delimiter (with title and vertical line) and the donation boxes
+*/
+.donations-container {
+  /* on big screens the donations-container has the direction 'row' */
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+/* 
+  the donation delimiter contains the donation type title and a vertical line 
+*/
+.donation-delimiter {
+  /* the visual role is to separate the two types of donations */
+  display: flex;
+  /* display the title and the vertical line below */
+  flex-direction: column;
+  width: 20%;
+  justify-content: space-between;
+  align-items: center;
+}
+.donation-type-title {
+  font-size: 20px;
+  padding: 30px 0;
+  text-align: center;
+  height: 30%;
+}
+.vertical-line {
+  /* the vertical line has this colour in order to match the donate now button colour */
+  border-left: 3px solid #321234;
+  height: 70%;
+}
+/* 
+  contains the donation boxes displayed as row on big screens
+*/
+.donation-types-container {
+  /* display the elements in this class as row */
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+  padding: 30px;
+  width: 80%;
+  /* the donation-types-container has a box shadow in order to visually separate the two types of donations better */
+  box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.75);
+}
+/*
+  the donation box has the title, description and button displayed as row
+*/
+.donation-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  row-gap: 20px;
+  width: 33%;
+}
+.donation-box p {
+  /* make the font bigger on big screens */
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .donations-container {
+    /* put the title of the donation type above the donation boxes */
+    flex-direction: column;
+  }
+  .vertical-line {
+    /* hide the vertical line on smaller screens */
+    visibility: hidden;
+  }
+  .donation-delimiter {
+    /* make the donation delimiter (for small screens only the title) occupy 100% space of the container */
+    width: 100%;
+  }
+  .donation-types-container {
+    width: 100%;
+    /* put the donation boxes in column for smaller screens */
+    flex-direction: column;
+    row-gap: 30px;
+    box-shadow: none;
+    padding: 0;
+  }
+  .donation-box {
+    padding: 10px;
+    width: 100%;
+    box-shadow: 2px 5px 10px -8px rgba(0, 0, 0, 0.75);
+  }
+  .donation-box p {
+    /* for better design, make the font size for each donation description smaller */
+    font-size: 14px;
+  }
+}

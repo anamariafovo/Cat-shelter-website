@@ -1,0 +1,162 @@
+/*
+  the header contains the navbar and the theme button 
+*/
+#header {
+  /* header's position is fixed, so that when the user scrolls up or down, the header is still visible */
+  position: fixed;
+  /* the header stays at the top of the page */
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  /* align the navbar and theme button in a row with space between  */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  /* add a slight shadow for the header in order to separate it visually from the rest of the body */
+  box-shadow: 1px 2px 7px 1px rgb(0 0 0 / 20%);
+  /* the header is on top of the other elements in the page */
+  z-index: 1;
+  /* give the header a lighter color in order to separate it visually from the rest of the body */
+  background: #c4c4ff;
+}
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-image {
+  width: 100px;
+  height: 80px;
+}
+/*
+  the navigation menu contains the list of pages and toggle menu button for small screens
+*/
+.nav-menu {
+  /* display the toggle button (when visible) and nav list in a row */
+  display: flex;
+  justify-content: space-between;
+}
+/*
+  styling the list of links in the navigation bar
+*/
+.nav-list {
+  /* for bigger screens the links have enough space te be displayed in a row */
+  display: flex;
+  align-items: center;
+  /* add some distance between the links to separate them */
+  column-gap: 60px;
+}
+/*
+  the nav link contains a link to a page
+*/
+.nav-link {
+  /* styling the nav links */
+  font-size: 20px;
+  /* the dark color is visible for both light and dark theme */
+  color: #000;
+  padding: 5px 10px;
+  /* display the link horizontally */
+  display: inline-block;
+  position: relative;
+}
+/*
+  create an underline for the nav links
+*/
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  /* give the line the effect of fading out from purple to transparent in order to find the light and dark themes */
+  background-image: linear-gradient(
+    90deg,
+    rgb(114, 2, 114),
+    rgba(255, 255, 255, 0.049)
+  );
+  /* give 0 widht and 1.5px height */
+  background-size: 0 1.5px;
+  background-repeat: no-repeat;
+  /* place the underline on the bottom of the link */
+  background-position: left bottom;
+  top: 0;
+  bottom: 0;
+  transition: 0.4s ease-out;
+}
+/*
+  the underline appears on hover
+*/
+.nav-link:hover::before {
+  /* change the width of the underline from 0 to 100% on hover */
+  background-size: 100% 1.5px;
+}
+/*
+  the toggle menu bars icon is hidden on big screens
+*/
+.uil-bars {
+  visibility: hidden;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+/*
+  the theme button contains the icon moon or sun
+*/
+.theme-button {
+  /* styling the element that contains the theme button */
+  display: flex;
+  /* center the icon inside this element */
+  align-items: center;
+  padding: 10px 0;
+}
+.uil-sun {
+  font-size: 23px;
+}
+.uil-moon {
+  font-size: 20px;
+}
+.uil-sun,
+.uil-moon {
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 5px 10px;
+}
+
+@media (max-width: 1200px) {
+  #header {
+    padding: 10px 20px;
+    /* align the items to the start of the header on smaller sreens */
+    /* this is done so that the hader items stay at the top of the navbar once the menu is opened */
+    /* if the value was 'center' then both header button would go down to the center of the navbar when the menu was opened */
+    align-items: start;
+  }
+  .logo-image {
+    display: none;
+  }
+  .nav-menu {
+    padding: 10px 0;
+  }
+  .nav-list {
+    position: fixed;
+    /* hide the menu links for smaller screens */
+    top: -200%;
+    /* change the direction from row to column so the menu list fits better on a small screen when opened */
+    flex-direction: column;
+    align-items: start;
+    row-gap: 10px;
+    margin-left: 5px;
+    padding-top: 5px;
+  }
+  .nav-link {
+    font-size: 16px;
+  }
+  .uil-bars {
+    /* the toggle menu bars icon is visible on small screens */
+    visibility: visible;
+  }
+  .show-list {
+    /* the show-list class is added or removed to the nav-list element through JS when the toggle menu button is clicked */
+    position: relative;
+    top: 0;
+  }
+}

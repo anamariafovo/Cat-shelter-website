@@ -1,0 +1,46 @@
+body {
+  font-family: "Roboto", snas-serif;
+  color: #212529;
+  background: linear-gradient(to right, #fff, #9999ff);
+  padding: 50px;
+}
+header {
+  margin-bottom: 40px;
+}
+.report-section {
+  margin: 0px 50px 50px 30px;
+}
+.report-section-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.report-section-subtitle {
+  font-weight: normal;
+  padding: 20px;
+  background: #ffffff34;
+  border-radius: 1.5rem;
+  width: 70%;
+}
+.report-subsection {
+  margin-bottom: 60px;
+}
+.report-subsection li {
+  display: flex;
+  flex-direction: column;
+}
+.report-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: justify;
+  line-height: 1.5;
+}
+.list-title {
+  margin: 20px 0;
+  font-size: 18px;
+}
+.image-link {
+  cursor: pointer;
+  text-decoration: none;
+  padding: 10px;
+}

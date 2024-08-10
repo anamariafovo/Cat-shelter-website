@@ -1,0 +1,104 @@
+.contact-option-title {
+  margin-top: 20px;
+  text-decoration: underline;
+}
+/* 
+  has different types of input fields
+*/
+.contact-form {
+  /* arrange elements in the contact from as column */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* separate each row for better visibility */
+  row-gap: 20px;
+  /* give a padding mostly for having a bit of distance between the margins of the form and the input fields */
+  padding: 30px;
+  width: 100%;
+  /* align the element in the center */
+  text-align: center;
+  background: #ffffff34;
+  box-shadow: 1px 2px 7px 1px rgb(0 0 0 / 20%);
+  border-radius: 1rem;
+  margin-bottom: 10px;
+}
+/* 
+  each form element contains an input field
+*/
+.form-element {
+  font-size: 20px;
+}
+/* 
+  add this class for input fields that have a text above them
+*/
+.form-element-with-text {
+  /* all element sinside the select are displayed as column */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-element input,
+.form-element-with-text select,
+.form-element-with-text textarea {
+  /* style the actual input fields */
+  font-size: 15px;
+  padding: 10px;
+  width: 60%;
+  margin-top: 10px;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  background: #fff3fd;
+}
+.submit-button {
+  font-size: 16px;
+  padding: 15px 20px;
+  border-radius: 0.25rem;
+  background: transparent;
+  /* we need to separate the button with a border */
+  border: 2px solid #fff3fd;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 20%;
+}
+.submit-button:hover {
+  transform: scale(1.03);
+}
+/* 
+  is displayed after clicking on the submit button and disappears after 3 seconds
+*/
+.confirmation {
+  font-size: 18px;
+  color: rgb(62, 10, 62);
+}
+
+@media (max-width: 768px) {
+  .contact-option-title {
+    font-size: 16px;
+  }
+  .contact-detail {
+    font-size: 14px;
+  }
+  .contact-form {
+    /* align the element at the start of the contact form on smaller screens */
+    text-align: start;
+  }
+  .form-element {
+    /* the font size for each form element is smaller in small screens to fit every content better */
+    font-size: 18px;
+    width: 100%;
+  }
+  .form-element-with-text {
+    align-items: start;
+  }
+  .form-element input,
+  .form-element select,
+  .form-element textarea,
+  .submit-button {
+    /* on small screens the input fields have 100% width for better visibility */
+    width: 100%;
+  }
+  .confirmation {
+    font-size: 16px;
+  }
+}

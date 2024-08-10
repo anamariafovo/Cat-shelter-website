@@ -1,0 +1,74 @@
+/* 
+  this contains all five adoptions steps
+*/
+.adoption-steps {
+  /* display the elements as column on bigger screens */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* separate the elements */
+  row-gap: 50px;
+  padding: 10px 50px;
+}
+/* 
+  the adoption step contains the adoption-info (the boxed text) and the adoption-side-info (arrow and side text)
+*/
+.adoption-step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 
+  the adoption info can be clicked to display a modal
+*/
+.adoption-info {
+  padding: 10px 20px;
+  /* give a box shadow to make it look more like a button */
+  box-shadow: 1px 2px 7px 1px rgb(0 0 0 / 20%);
+  border-radius: 1rem;
+  /* make it clear that the adoption info is clickable to display the modal */
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 20px;
+  background: rgba(255, 255, 255, 0.489);
+}
+.adoption-info:hover {
+  transform: scale(0.9);
+  background: rgba(255, 255, 255, 0.204);
+}
+/* 
+  the adoption side info contains the arrow icon and text
+*/
+.adoption-side-info {
+  /* display the arrow and then the side info */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 7px;
+}
+/* 
+  the arrow icon inside the adoption side info
+*/
+.uil-arrow-right {
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .adoption-steps {
+    /* give 0 padding to give more space and fit better on smaller screens */
+    padding: 0;
+  }
+  .adoption-step {
+    /* style the adoption info and the side info (incl. the arrow icon) */
+    /* grid makes the information looking better organised on small screens */
+    display: grid;
+    /* display both the info and side info on the same row */
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .adoption-info {
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+  }
+}

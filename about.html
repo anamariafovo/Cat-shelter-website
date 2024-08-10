@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Yashar Javdani" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mao</title>
+    <!-- add the Roboto font with different font weights -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <!-- add icons from https://iconscout.com/unicons/ -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <!-- contains the theme and toggle menu buttons and the navigation links -->
+    <header id="header">
+      <!-- navbar -->
+      <!-- contains the toggle button (for small screens) and navigation links -->
+      <nav id="navbar">
+        <!-- logo -->
+        <!-- the logo is hidden on small screen -->
+        <!-- click on the logo in order to reach the website report -->
+        <a href="report.html" title="Click here to see the website report">
+          <!-- Illustration from https://undraw.co/ -->
+          <img
+            src="assets/illustrations/logo.svg"
+            alt="Logo image"
+            class="logo-image" />
+        </a>
+        <!-- navigation menu -->
+        <div class="nav-menu">
+          <!-- toggle button -->
+          <i class="uil uil-bars" id="nav-toggle-button"></i>
+          <!-- navigation list -->
+          <ul class="nav-list" id="nav-list">
+            <!-- navigation list items -->
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="adoption.html" class="nav-link">Adopt a Cat</a>
+            </li>
+            <li class="nav-item">
+              <a href="donation.html" class="nav-link">Donations</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About us</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- theme button -->
+      <div class="theme-button">
+        <i class="uil uil-moon" id="theme-switch-button"></i>
+      </div>
+    </header>
+    <!-- main section of the about us page -->
+    <!-- 
+      contains:
+      - title
+      - subtitle
+      - text with pictures
+      - FAQ section
+    -->
+    <main>
+      <button class="scroll-up-button" id="scroll-up-button">
+        <i class="uil uil-arrow-up scroll-up-icon"></i>
+      </button>
+      <!-- the first section of the about us page -->
+      <section class="container">
+        <h1 class="title">Learn more about us!</h1>
+        <h2 class="subtitle">
+          Our charity organisation helps stray cats around Europe to find a
+          loving home and a caring family.
+        </h2>
+        <!-- the first about container -->
+        <!-- about container has two elements, each of them containing a text and a picture -->
+        <div class="about-container">
+          <!-- the first about info -->
+          <!-- about info contains a title, paragraph and photo or video -->
+          <div class="about-info">
+            <div>
+              <h3 class="about-info-title">Our Organisation</h3>
+              <p>
+                We are <b>Mao</b>, a charity organisation that helps cats around
+                Europe. Our shelter provides rescued cats all the attention and
+                care they need to live a happy life. We started as a small team,
+                motivated by creating a safe environment for cats. At the
+                current moment we activate in multiple countries around Europe,
+                and with help from caring people we can continue growing and
+                doing our work.
+              </p>
+              <p>
+                We started our journey in 2017, with a small team of 7 people.
+                Over time our team grew and we crossed the borders. We now have
+                associates in multiple cities from Bulgaria, Romania, Ukraine,
+                Hungary, Austria, Germany, France, United Kingdom, Poland, and
+                Czech Republic. We constantly provide food, shelter, and
+                treatments for cats in need. We also offer cats for adoption,
+                and always provide the most simple way for you to help them.
+              </p>
+            </div>
+            <!-- make the video start automatically -->
+            <!-- show the video controls -->
+            <video controls autoplay muted>
+              <!-- Video by D e n n y s ✨: https://www.pexels.com/video/a-white-kitten-playing-with-a-flowering-plant-5478165/ -->
+              <source
+                src="assets/videos/cat-playing-outside.mp4"
+                type="video/mp4" />
+              Your browser does not support videos.
+            </video>
+          </div>
+          <!-- the second about info -->
+          <div class="about-info">
+            <!-- Image by <a href="https://pixabay.com/users/stocksnap-894430/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2583446">StockSnap</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2583446">Pixabay</a> -->
+            <img
+              src="assets/images/stray-cat.webp"
+              alt="A stray cat sitting on the street." />
+            <div>
+              <h3 class="about-info-title">Our Motivation</h3>
+              <!-- text generaterd with https://deepai.org/chat/text-generator -->
+              <p>
+                We are motivated to help stray cats because we believe in giving
+                these vulnerable creatures a better quality of life. Seeing them
+                in distress and suffering drives us to take action and provide
+                them with food, shelter, and medical care. The satisfaction of
+                knowing that we can make a difference in their lives and give
+                them a chance at a happier and healthier future is truly
+                rewarding and keeps us committed to helping them however we can.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- the second about container -->
+        <div class="about-container">
+          <!-- the third about info -->
+          <div class="about-info">
+            <div>
+              <h3 class="about-info-title">Our Vision</h3>
+              <!-- text generaterd with https://deepai.org/chat/text-generator -->
+              <p>
+                Helping stray cats can make the world a better place by reducing
+                their suffering and improving their quality of life. By
+                providing them with food, shelter, and medical care, we can save
+                them from starvation, illness, and injury. In doing so, we also
+                prevent overpopulation, reduce the spread of diseases, and
+                promote a sense of compassion in our communities. Ultimately,
+                creating a safer and more humane environment for all living
+                beings.
+              </p>
+            </div>
+            <!-- Image by <a href="https://pixabay.com/users/stocksnap-894430/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2570587">StockSnap</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2570587">Pixabay</a> -->
+            <img
+              src="assets/images/girl-with-cat.webp"
+              alt="A woman holding a cat in her arms." />
+          </div>
+          <!-- the fourth about info -->
+          <div class="about-info">
+            <!-- Photo by <a href="https://unsplash.com/@dame4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Dmitry Bogachev</a> on <a href="https://unsplash.com/photos/an-orange-and-white-cat-sitting-in-a-cage-hYJ-lIReNSA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
+            <img
+              src="assets/images/cat-shelter.webp"
+              alt="A freshly rescued cat sitting in a cage at the shelter." />
+            <div>
+              <h3 class="about-info-title">The future of helping stray cats</h3>
+              <!-- text generaterd with https://deepai.org/chat/text-generator -->
+              <p>
+                The future of helping stray cats looks promising as more
+                organizations and individuals are becoming active in rescuing,
+                fostering, and finding homes for these animals. With
+                advancements in technology, such as social media platforms and
+                online fundraising tools, awareness and support for stray cat
+                populations are increasing. Additionally, there is a growing
+                trend towards trap-neuter-return programs to control the
+                overpopulation of strays and improve their quality of life.
+                Overall, with continued efforts and a community-driven approach,
+                the future of helping stray cats seems hopeful in finding
+                sustainable solutions for their welfare.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- the second section of the about us page -->
+      <!-- contains the FAQ section -->
+      <section class="container">
+        <h2 class="subtitle">Check our most frequent answered questions</h2>
+        <!-- FAQ container has a dropdwon which on click displays all the frequently asked question -->
+        <div class="faq-container">
+          <!-- the dropdown -->
+          <div id="faq-dropdown" class="faq-dropdown">
+            <span>FAQ</span>
+            <!-- dropdown button -->
+            <!-- on click it swicthed between arrow down and arrow up -->
+            <span id="dropdown-button">
+              <i id="dropdown-icon" class="uil uil-arrow-down"></i>
+            </span>
+          </div>
+          <!-- the FAQ list containing questions and answers -->
+          <div id="faq-list" class="faq-list">
+            <!-- the faq-group contains one question and its answer -->
+            <!-- by clicking each question, the answer is opened below -->
+            <div class="faq-group" onclick="openAnswer('answerOne')">
+              <div class="faq-question">
+                <b>Q: </b>
+                Can I adopt a cat if I already have another cat at home?
+              </div>
+              <!-- the answer is initially hidden, but shown when the user click the question above it -->
+              <div class="faq-answer" id="answerOne">
+                <b>A: </b>
+                Sure! Some cats we have grew up getting in contact with other
+                cats and they are very friendly and curious. If your cat also
+                accepts another cat then there is no problem. You have also the
+                option to schedule a visit at our centre and bring your cat as
+                well. This is the best way to check if they will get along well.
+              </div>
+            </div>
+            <div class="faq-group" onclick="openAnswer('answerTwo')">
+              <div class="faq-question">
+                <b>Q: </b>
+                I live in a house with garden. Can the cat I adopted stay
+                outside over night?
+              </div>
+              <div class="faq-answer" id="answerTwo">
+                <b>A: </b>
+                We recommend that you know all the time where your cat is. Cats
+                that live outside the home can run away or get in trouble with
+                other cats or animals. This is why we don't recommend letting
+                your cat stay outside without supervision from you. You can
+                learn your cat to wear a leash and go for a walk outside
+                together. If you have any question about this, please
+                <a href="contact.html">contact us</a> and we will do our best to
+                help you with advice.
+              </div>
+            </div>
+            <div class="faq-group" onclick="openAnswer('answerThree')">
+              <div class="faq-question">
+                <b>Q: </b>
+                Can I adopt a cat from your shelters even if I don't live in the
+                coutries you activate in?
+              </div>
+              <div class="faq-answer" id="answerThree">
+                <b>A: </b>
+                Of course, but you will need to take a trip to one of the
+                countries we have associates in (Bulgaria, Romania, Ukraine,
+                Hungary, Austria, Germany, France, UK, Poland, or Czech
+                Republic), in order to take the cat home. We can schedule a call
+                and show you the cats we have for adoption. Once you agree on a
+                cat, we will make all the documents and formalities necessary
+                for the trip (passport, chip, vaccines, etc.), free of charge.
+                Please contact us through the
+                <a href="contact.html">contact form</a> or give us a call at
+                +1234567890. We will do our best to help you with the adoption
+                process.
+              </div>
+            </div>
+            <div class="faq-group" onclick="openAnswer('answerFour')">
+              <div class="faq-question">
+                <b>Q: </b>
+                How can I cancel my monthly donation subscription?
+              </div>
+              <div class="faq-answer" id="answerFour">
+                <b>A: </b>
+                It is very simple to cancel the subscription. Just leave a
+                message in the <a href="contact.html">contact form</a> adding
+                your email, and one of our team members will get in contact with
+                you and cancel the subscription with no delay.
+              </div>
+            </div>
+            <div class="faq-group" onclick="openAnswer('answerFive')">
+              <div class="faq-question">
+                <b>Q: </b>
+                I am aware of a family of stray cats that are in need of food
+                and care. Can I get in contact with you about this?
+              </div>
+              <div class="faq-answer" id="answerFive">
+                <b>A: </b>
+                Of course! Please contact us as soon as possible
+                <a href="contact.html">contact form</a> or call us at
+                +1234567890. If you live in one of the countries we rescue cats
+                from (Bulgaria, Romania, Ukraine, Hungary, Austria, Germany,
+                France, UK, Poland, or Czech Republic) we will get in contact
+                with our associates there and organize ourselves to help.
+              </div>
+            </div>
+            <div class="faq-group" onclick="openAnswer('answerSix')">
+              <div class="faq-question">
+                <b>Q: </b>
+                Can I schedule my cat for a vaccine appointment at your centre?
+              </div>
+              <div class="faq-answer" id="answerSix">
+                <b>A: </b>
+                Of course! We provide aid regarding vaccinations, treatments and
+                special food for your cat. Just for your information, all of
+                these need to be payed by you. Please check the opening hours
+                and schedule an appointment in our
+                <a href="contact.html">contact form</a> or call us at
+                +1234567890.
+              </div>
+            </div>
+            <div class="faq-group" onclick="openAnswer('answerSeven')">
+              <div class="faq-question">
+                <b>Q: </b>
+                Do you have a veterinarian that can check my cat?
+              </div>
+              <div class="faq-answer" id="answerSeven">
+                <b>A: </b>
+                Yes, we can help you with that! Since we rescue and treat cats,
+                we are always in contact with veterinarians that can offer a
+                medical check for your cat. Just for your information, the
+                appointment needs to be payed by you. Please check the opening
+                hours and schedule an appointment in our
+                <a href="contact.html">contact form</a> or call us at
+                +1234567890.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- the footer -->
+    <!-- contains links, and copyright message -->
+    <!-- the year is automatically set as the current year through JS -->
+    <footer>
+      <p class="copyright">
+        Copyright &COPY; <a href="index.html">Mao</a> <span id="date"></span>.
+        All rights reserved
+      </p>
+      <ul class="footer-links">
+        <li>
+          <a href="#"> Legal Stuff </a>
+        </li>
+        <li>
+          <a href="#"> Provacy Policy </a>
+        </li>
+        <li>
+          <a href="#"> Security </a>
+        </li>
+        <li>
+          <a href="#"> Website Accessibility </a>
+        </li>
+        <li>
+          <a href="#"> Manage Cookies </a>
+        </li>
+      </ul>
+    </footer>
+    <!-- JS files -->
+    <script src="/js/main.js"></script>
+    <script src="/js/faqDropdown.js"></script>
+  </body>
+</html>

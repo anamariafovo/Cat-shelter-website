@@ -1,0 +1,308 @@
+@import url("home.css");
+@import url("adoption.css");
+@import url("donation.css");
+@import url("about.css");
+@import url("contact.css");
+@import url("navbar.css");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  /* this colour was chosen because it is more pleasant to the eye than a strong #000 */
+  color: #212529;
+  /* the body has a linear gradient background colour */
+  /* the combination of white and light indigo offers a calm visual experience */
+  /* for the dark theme the gradient is changed */
+  background: linear-gradient(to right, #fff, #9999ff);
+}
+/* 
+  each page has a main section
+*/
+main {
+  /* separate each main section to structure the content visually better */
+  margin-top: 150px;
+}
+/* 
+  the h1 and h2 elements are used on every page
+  example: the title and subtitle of the page
+*/
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+p {
+  font-size: 1.3rem;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* 
+  each page has multiple sections
+  usually these sections also have the class '.container'
+*/
+section {
+  /* separate each section with 20px padding */
+  /* this makes it easier for the user to understand how the elements are structured from the first look */
+  padding: 20px;
+}
+/* 
+  the select element is found in the contact form
+*/
+select {
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+}
+/* 
+  the footer can be found on every page at the bottom of the page
+  it contains a copyright text and links
+*/
+footer {
+  /* the background colour for the footer is the same as the text colour for the body */
+  /* this is so that all the elements merge together smoothly */
+  background: #212529;
+  padding: 30px;
+  /* for visibility the links have the colour white */
+  color: #fff;
+  display: flex;
+  /* the footer copyright section and the footer links are one under another */
+  flex-direction: column;
+  align-items: center;
+}
+.copyright {
+  /* style the whole copyright text */
+  font-size: 20px;
+  font-weight: 200;
+}
+.copyright a {
+  /* the name of the organisation in the copyright has colour white  */
+  color: #fff;
+}
+.copyright a:hover {
+  color: #9999ff;
+}
+.footer-links {
+  /* align footer items horizontally on big screens */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  padding: 50px 10px 10px 10px;
+}
+.footer-links a {
+  color: #fff;
+  /* style each footer link with an uderline */
+  text-decoration: underline;
+}
+.footer-links a:hover {
+  color: #9999ff;
+}
+/* 
+  the dark theme for the body
+*/
+.dark-theme {
+  /* the darker theme is added in order to improve user experience */
+  /* for example can be used when the user is in a darker room or it is dark outside */
+  /* background: linear-gradient(to left, #1f76b4, #6d6dff) !important; */
+  background: #1f76b4;
+  color: #fff;
+}
+/* 
+  the dark theme for the header
+*/
+.dark-theme-header {
+  background: #51a0d9 !important;
+}
+/*
+  all pages have multiple containers
+*/
+.container {
+  /* the containers occupy 80% of the screen for bigger screens */
+  width: 80%;
+  margin: 0 auto;
+}
+/* 
+  all pages have a title and subtitle that contain these classes
+*/
+.title,
+.subtitle {
+  text-align: center;
+  padding: 10px;
+}
+/*
+  this class is used in the contact page for address and opening hours
+*/
+.vertical-elements {
+  padding: 10px;
+  /* display the elements inside this class as column */
+  display: flex;
+  flex-direction: column;
+  /* separate the elements */
+  row-gap: 10px;
+}
+.vertical-element {
+  font-size: 16px;
+}
+/* 
+  the scroll up button is fixed at the bottom of the screen on the left
+*/
+.scroll-up-button {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  padding: 15px;
+  /* the scroll up button doesn't have a solid colour because sometimes it can overlap other elements */
+  background: rgba(33, 37, 41, 0.506);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 1.25rem;
+  transition: 0.5s;
+  /* use z-index 1 in order to make sure that the button stays on top of the other elements in the page */
+  z-index: 1;
+}
+.scroll-up-button:hover {
+  background: rgba(33, 37, 41, 0.836);
+  transform: scale(0.9);
+}
+.scroll-up-icon {
+  font-size: 30px;
+}
+/* 
+  the modal class is used in the adoption page
+*/
+.modal {
+  /* initially the element is hidden */
+  visibility: hidden;
+  display: block;
+  font-size: 20px;
+  text-align: start;
+  /* move the modal in the center of the screen */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  width: 50%;
+  height: 50%;
+  /* giving the modal a gradient from right to left */
+  /* the colour on the right side of the modal is brighter */
+  /* this is in order to balance the visual effect of the body's gadient */
+  background: linear-gradient(to left, #9f9fff, #9999ff);
+  box-shadow: 1px 2px 7px 1px rgb(0 0 0 / 20%);
+  color: #fff;
+  line-height: 1.5;
+  border-radius: 2rem;
+  z-index: 10;
+}
+/* 
+  add this class to the modals for example in order to display them
+*/
+.show {
+  visibility: visible;
+}
+/* 
+  make the background dimmer when modal is opened
+*/
+.modal::after {
+  /* make the background dimmer when the modal is opened */
+  position: fixed;
+  content: "";
+  /* set top and left properties to -50% in order to cover the whole screen */
+  top: -50%;
+  left: -50%;
+  /* make the element have the whole screen's width and height */
+  width: 100vw;
+  height: 100vh;
+  /* set the opacity */
+  background: rgba(0, 0, 0, 0.2);
+  /* set the z index to a negative value in order to be behind the modal */
+  z-index: -2;
+}
+.modal b {
+  color: #fff;
+}
+/* 
+  a general class for buttons
+*/
+.button {
+  font-size: 18px;
+  color: #fff;
+  /* the colour here matches the general colour palette used on the whole website */
+  background: #321234;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+.button:hover {
+  background: #9a3aa0;
+  transform: scale(1.05);
+}
+
+@media (min-width: 769px) and (max-width: 1920px) {
+  h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  main {
+    margin-top: 100px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  .container {
+    /* containers occupy more space on smaller screens to improve the readability */
+    width: 90%;
+    padding: 10px 20px;
+  }
+  .modal {
+    padding: 20px;
+    font-size: 14px;
+  }
+  .footer-links {
+    /* on smaller screens the footer links are one under another */
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .footer-links a {
+    font-size: 14px;
+  }
+  .scroll-up-icon {
+    font-size: 20px;
+  }
+  .copyright {
+    font-size: 16px;
+  }
+  .button {
+    /* make the button's text smaller for small screens */
+    font-size: 16px;
+  }
+}

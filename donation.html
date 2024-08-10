@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Yashar Javdani" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mao</title>
+    <!-- add the Roboto font with different font weights -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <!-- add icons from https://iconscout.com/unicons/ -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav id="navbar">
+        <!-- logo -->
+        <!-- the logo is hidden on small screen -->
+        <!-- click on the logo in order to reach the website report -->
+        <a href="report.html" title="Click here to see the website report">
+          <!-- Illustration from https://undraw.co/ -->
+          <img
+            src="assets/illustrations/logo.svg"
+            alt="Logo image"
+            class="logo-image" />
+        </a>
+        <!-- navigation menu -->
+        <div class="nav-menu">
+          <!-- toggle button -->
+          <i class="uil uil-bars" id="nav-toggle-button"></i>
+          <!-- navigation list -->
+          <ul class="nav-list" id="nav-list">
+            <!-- navigation list items -->
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="adoption.html" class="nav-link">Adopt a Cat</a>
+            </li>
+            <li class="nav-item">
+              <a href="donation.html" class="nav-link">Donations</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About us</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- theme button -->
+      <div class="theme-button">
+        <i class="uil uil-moon" id="theme-switch-button"></i>
+      </div>
+    </header>
+    <!-- the main section of the donations page -->
+    <!--
+      contains:
+      - title
+      - subtitle
+      - banner image
+      - donations section
+      - scroll up button
+    -->
+    <main>
+      <!-- fixed scroll up button -->
+      <button class="scroll-up-button" id="scroll-up-button">
+        <i class="uil uil-arrow-up scroll-up-icon"></i>
+      </button>
+      <!-- the first section of the donations page -->
+      <section class="container">
+        <h1 class="title">Here is how you can support us</h1>
+        <h2 class="subtitle">Let's work together to build a better place.</h2>
+        <!-- Photo by Pixabay: https://www.pexels.com/photo/assorted-color-kittens-45170/ -->
+        <img
+          src="assets/images/banner.webp"
+          alt="Image of five cats sitting on the grass field."
+          class="banner-image" />
+      </section>
+      <!-- the second section of the donations page -->
+      <section class="container">
+        <!-- the donation container contains one type of donations (every day help or special causes) -->
+        <!-- the first donation conatiner: contains the every day help donations type -->
+        <div class="donations-container">
+          <!-- the delimiter cotains the type title and the vertical line (on bg screens) -->
+          <div class="donation-delimiter">
+            <h3 class="donation-type-title">
+              Donations that help us do our daily work
+            </h3>
+            <!-- a vertical line that separates better the two types of donations -->
+            <!-- visible only on big screens -->
+            <span class="vertical-line"></span>
+          </div>
+          <!-- the actual descriptions of the donations and the donate now button -->
+          <div class="donation-types-container">
+            <!-- a donation box has the title, description and button -->
+            <div class="donation-box">
+              <h3>Donate once</h3>
+              <p>
+                Use the quick option to donate once. Every small help is a big
+                way to show that you believe in what we do.
+              </p>
+              <a href="donation.html" class="button"> Donate Now </a>
+            </div>
+            <!-- second donation box -->
+            <div class="donation-box">
+              <h3>Become a monthly supporter</h3>
+              <p>
+                Sign up for the monthly donation once and then donate every
+                month. You can choose the amount you are able to donate every
+                month.
+              </p>
+              <a href="donation.html" class="button"> Donate Now </a>
+            </div>
+            <!-- third donation box -->
+            <div class="donation-box">
+              <h3>Redirect part of your taxes</h3>
+              <p>
+                Each month, a small part of your taxes can be redirected to us.
+              </p>
+              <a href="donation.html" class="button"> Donate Now </a>
+            </div>
+          </div>
+        </div>
+        <!-- the second donation container: contains the special causes donations type -->
+        <div class="donations-container">
+          <!-- donation-delimiter contains the donation type title and vertical line -->
+          <div class="donation-delimiter">
+            <h3 class="donation-type-title">
+              Donations that help us fight for special causes
+            </h3>
+            <span class="vertical-line"></span>
+          </div>
+          <!-- the second donation-types-container element -->
+          <div class="donation-types-container">
+            <!-- the third donation box -->
+            <div class="donation-box">
+              <h3>Help the stray cats</h3>
+              <p>
+                The cats we offer for adoption are usually rescued stray cats.
+                We are also helping cats from multiple coutries in Europe by
+                getting in contact with local communities and helping with
+                vaccinations, or provide treatments when necessary.
+              </p>
+              <a href="donation.html" class="button"> Donate Now </a>
+            </div>
+            <!-- the fourth donation box -->
+            <div class="donation-box">
+              <h3>Help the big cats</h3>
+              <p>
+                Help us minimize the big cats trade and stop the abuse inflicted
+                on them. Big cats also need our help.
+              </p>
+              <a href="donation.html" class="button"> Donate Now </a>
+            </div>
+            <!-- the fifth donation box -->
+            <div class="donation-box">
+              <h3>Medical treatments donations</h3>
+              <p>
+                We are not always in need of special treatments for rescued
+                cats, but when we do, they are costly. You can help us with this
+                by making a one time donation.
+              </p>
+              <a href="donation.html" class="button"> Donate Now </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- the footer -->
+    <!-- contains links, and copyright message -->
+    <!-- the year is automatically set as the current year through JS -->
+    <footer>
+      <p class="copyright">
+        Copyright &COPY; <a href="index.html">Mao</a> <span id="date"></span>.
+        All rights reserved
+      </p>
+      <ul class="footer-links">
+        <li>
+          <a href="#"> Legal Stuff </a>
+        </li>
+        <li>
+          <a href="#"> Provacy Policy </a>
+        </li>
+        <li>
+          <a href="#"> Security </a>
+        </li>
+        <li>
+          <a href="#"> Website Accessibility </a>
+        </li>
+        <li>
+          <a href="#"> Manage Cookies </a>
+        </li>
+      </ul>
+    </footer>
+    <!-- JS files -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>

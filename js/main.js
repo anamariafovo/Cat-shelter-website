@@ -18,8 +18,6 @@ toggleBtn.addEventListener('click', () => {
 //get the theme switcher button
 //this element contains the icon that will be displayed on theme switch (moon or sun)
 const themeButton = document.getElementById('theme-switch-button');
-//get the header element in order to change the theme for it too
-const headerEl = document.getElementById('header');
 /*
     check if the body currently has the dark theme
     if the body currently has the dark theme, this function will return true
@@ -62,7 +60,6 @@ themeButton.addEventListener('click', () => {
     themeButton.classList.remove(iconToRemove);
     //toggle the dark theme for header and body
     document.body.classList.toggle('dark-theme');
-    headerEl.classList.toggle('dark-theme-header');
     //create or update the variable called 'stored-theme' in the local storage
     //if the user switches to dark theme, the stored-theme variable gets the value 'dark'
     //if the user switches to light theme, it gets the value 'light'
@@ -81,7 +78,6 @@ if (storedTheme && storedThemeIcon) {
     // if the stored value is dark, add the dark theme for body and header
     // if not, remove the dark theme from body and header
     document.body.classList[storedTheme === 'dark' ? 'add' : 'remove']('dark-theme');
-    headerEl.classList[storedTheme === 'dark' ? 'add' : 'remove']('dark-theme-header');
     //if the uil-sun icon is stored in local storage, add this class to the theme button in order to show the sun icon
     //if not, add the uil-moon class to the theme button in order to show the moon icon
     if(storedThemeIcon === 'uil-sun'){

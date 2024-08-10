@@ -22,7 +22,7 @@ body {
   /* the body has a linear gradient background colour */
   /* the combination of white and light indigo offers a calm visual experience */
   /* for the dark theme the gradient is changed */
-  background: linear-gradient(to right, #fff, #9999ff);
+  background: #fff;
 }
 /* 
   each page has a main section
@@ -125,14 +125,8 @@ footer {
   /* the darker theme is added in order to improve user experience */
   /* for example can be used when the user is in a darker room or it is dark outside */
   /* background: linear-gradient(to left, #1f76b4, #6d6dff) !important; */
-  background: #1f76b4;
+  background: #51a0d9;
   color: #fff;
-}
-/* 
-  the dark theme for the header
-*/
-.dark-theme-header {
-  background: #51a0d9 !important;
 }
 /*
   all pages have multiple containers

@@ -13,13 +13,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 20px;
+  padding: 20px;
   /* add a slight shadow for the header in order to separate it visually from the rest of the body */
   box-shadow: 1px 2px 7px 1px rgb(0 0 0 / 20%);
   /* the header is on top of the other elements in the page */
   z-index: 1;
   /* give the header a lighter color in order to separate it visually from the rest of the body */
-  background: #c4c4ff;
+  background: #1f76b4;
 }
 #navbar {
   display: flex;
@@ -71,8 +71,8 @@
   /* give the line the effect of fading out from purple to transparent in order to find the light and dark themes */
   background-image: linear-gradient(
     90deg,
-    rgb(114, 2, 114),
-    rgba(255, 255, 255, 0.049)
+    rgb(156, 181, 199),
+    rgba(31, 118, 180, 0.173)
   );
   /* give 0 widht and 1.5px height */
   background-size: 0 1.5px;

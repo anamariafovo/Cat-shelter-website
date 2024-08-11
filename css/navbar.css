@@ -68,11 +68,7 @@
   position: absolute;
   width: 100%;
   /* give the line the effect of fading out from purple to transparent in order to find the light and dark themes */
-  background-image: linear-gradient(
-    90deg,
-    rgb(156, 181, 199),
-    rgba(31, 118, 180, 0.173)
-  );
+  background-image: linear-gradient(90deg, #fff, rgba(31, 118, 180, 0.173));
   /* give 0 widht and 1.5px height */
   background-size: 0 1.5px;
   background-repeat: no-repeat;

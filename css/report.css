@@ -20,7 +20,6 @@ header {
   padding: 20px;
   background: #ffffff34;
   border-radius: 1.5rem;
-  width: 70%;
 }
 .report-subsection {
   margin-bottom: 60px;
@@ -28,6 +27,10 @@ header {
 .report-subsection li {
   display: flex;
   flex-direction: column;
+}
+.report-subsection img {
+  border-radius: 15px;
+  width: 100%;
 }
 .report-text {
   font-size: 18px;

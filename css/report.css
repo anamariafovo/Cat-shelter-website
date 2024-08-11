@@ -41,6 +41,7 @@ header {
 .list-title {
   margin: 20px 0;
   font-size: 18px;
+  font-weight: bold;
 }
 .image-link {
   cursor: pointer;
@@ -48,8 +49,23 @@ header {
   padding: 10px;
 }
 
-@media (min-width: 769px) and (max-width: 1920px) {
+@media (max-width: 1920px) {
+  .report-section {
+    margin: 0;
+  }
   .report-subsection img {
     width: 50%;
+  }
+}
+
+@media (max-width: 769px) {
+  .report-subsection img {
+    width: 100%;
+  }
+  .report-text {
+    font-size: 14px;
+  }
+  .list-title {
+    font-size: 16px;
   }
 }

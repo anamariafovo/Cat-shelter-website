@@ -56,7 +56,7 @@
   display: flex;
   width: 100%;
   /* match the color paletter of the website */
-  background: linear-gradient(to right, #1f76b4, #9999ff);
+  background: #51a0d9;
   border: 2px solid #fff3fd;
   justify-content: space-between;
   align-items: center;

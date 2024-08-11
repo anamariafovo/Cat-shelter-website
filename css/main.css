@@ -99,7 +99,7 @@ footer {
   color: #fff;
 }
 .copyright a:hover {
-  color: #9999ff;
+  color: #51a0d9;
 }
 .footer-links {
   /* align footer items horizontally on big screens */
@@ -116,7 +116,7 @@ footer {
   text-decoration: underline;
 }
 .footer-links a:hover {
-  color: #9999ff;
+  color: #51a0d9;
 }
 /* 
   the dark theme for the body
@@ -124,9 +124,7 @@ footer {
 .dark-theme {
   /* the darker theme is added in order to improve user experience */
   /* for example can be used when the user is in a darker room or it is dark outside */
-  /* background: linear-gradient(to left, #1f76b4, #6d6dff) !important; */
-  background: #51a0d9;
-  color: #fff;
+  background: #a8cfec;
 }
 /*
   all pages have multiple containers
@@ -200,13 +198,11 @@ footer {
   padding: 40px;
   width: 50%;
   height: 50%;
-  /* giving the modal a gradient from right to left */
-  /* the colour on the right side of the modal is brighter */
-  /* this is in order to balance the visual effect of the body's gadient */
-  background: linear-gradient(to left, #9f9fff, #9999ff);
+  background: #0e4063;
   box-shadow: 1px 2px 7px 1px rgb(0 0 0 / 20%);
   color: #fff;
   line-height: 1.5;
+  font-weight: 300;
   border-radius: 2rem;
   z-index: 10;
 }

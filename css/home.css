@@ -112,6 +112,7 @@
 .article-title,
 .article-description {
   padding: 10px;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) and (max-width: 1400px) {
@@ -123,12 +124,18 @@
     /* display two articles per row for smaller to medium screens */
     grid-template-columns: repeat(2, 1fr);
   }
+  .article-description {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .articles {
     /* put only one article per row for smaller screens */
     grid-template-columns: repeat(1, 1fr);
+  }
+  .article-description {
+    font-size: 16px;
   }
   .welcome-text p {
     line-height: 1.5;
